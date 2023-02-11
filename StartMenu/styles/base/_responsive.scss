@@ -1,0 +1,131 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == 1500 {
+    @media only screen and (max-width: 93.75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == 1000 {
+    @media only screen and (max-width: 62.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == 830 {
+    @media only screen and (max-width: 51.875em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == 740 {
+    @media only screen and (max-width: 46.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == 480 {
+    @media only screen and (max-width: 30em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == 370 {
+    @media only screen and (max-width: 23.125em) {
+      @content;
+    }
+  }
+}
+
+html {
+  @include respond(1500) {
+    font-size: 50%;
+  }
+
+  @include respond(1000) {
+    font-size: 45%;
+  }
+}
+
+body {
+  @include respond(830) {
+    border: none;
+  }
+}
+
+.hidden {
+  @include respond(1000) {
+    display: block;
+  }
+}
+
+.hero {
+  @include respond(830) {
+    width: 100%;
+    height: 200%;
+    display: block;
+    overflow: visible;
+
+    border: 2px solid #2f9e44;
+  }
+
+  &__left,
+  &__right {
+    @include respond(830) {
+      display: block;
+      overflow: visible;
+
+      width: 100%;
+    }
+
+    &-flexbox {
+      @include respond(830) {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &-header {
+      @include respond(740) {
+        line-height: 0.9;
+      }
+    }
+
+    &-details {
+      @include respond(740) {
+        margin-top: 3rem;
+        line-height: 1.4;
+      }
+    }
+
+    &::before {
+      @include respond(1000) {
+        opacity: 1;
+      }
+    }
+  }
+  &__right {
+    &::before {
+      @include respond(480) {
+        background-position: left;
+      }
+
+      @include respond(370) {
+        background-position: left;
+      }
+    }
+  }
+
+  &::after {
+    @include respond(1000) {
+      top: 70%;
+    }
+
+    @include respond(830) {
+      left: 50%;
+      top: 50%;
+    }
+  }
+}
