@@ -1,0 +1,89 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == 1671 {
+    @media only screen and (max-width: 104.4375em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == 1250 {
+    @media only screen and (max-width: 78.125em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == 900 {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == 400 {
+    @media only screen and (max-width: 25em) {
+      @content;
+    }
+  }
+}
+.master {
+  @include respond(1671) {
+    line-height: 1;
+  }
+
+  &__header {
+    &-2 {
+      display: flex;
+      .box2 {
+        @include respond(900) {
+          order: -1 !important;
+        }
+      }
+    }
+
+    & h2 {
+      @include respond(900) {
+        width: 100%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    @include respond(1250) {
+      display: flex;
+      padding: 0 !important;
+    }
+
+    @include respond(900) {
+      flex-direction: column;
+      height: 100vh !important;
+      margin: 5rem 1.5rem 1.5rem 1.5rem !important;
+    }
+
+    @include respond(400) {
+      font-size: 4rem !important;
+    }
+
+    &__pic {
+      @include respond(1250) {
+        position: relative !important;
+        width: 100% !important;
+        height: 100% !important;
+        flex: 1;
+      }
+
+      @include respond(900) {
+        flex-direction: column;
+        height: 100rem;
+      }
+    }
+  }
+}
+
+.box1 {
+  @include respond(1250) {
+    padding: 3rem !important;
+  }
+
+  @include respond(900) {
+    text-align: center;
+    padding-bottom: 5rem !important;
+  }
+}

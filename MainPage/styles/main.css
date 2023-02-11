@@ -1,0 +1,145 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  /*
+        we want rem = 10px, by default rem = 16px,
+        10 ÷ 16 = 0.625 (62.5%)
+        */
+  font-size: 62.5%;
+}
+
+a {
+  color: inherit;
+}
+
+.back {
+  position: absolute;
+  top: -4.5rem;
+  right: 0;
+  padding: 3rem;
+  font-size: 6rem;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 104.4375em) {
+  .master {
+    line-height: 1;
+  }
+}
+.master__header-2 {
+  display: flex;
+}
+@media only screen and (max-width: 56.25em) {
+  .master__header-2 .box2 {
+    order: -1 !important;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .master__header h2 {
+    width: 100%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media only screen and (max-width: 78.125em) {
+  .master__header {
+    display: flex;
+    padding: 0 !important;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .master__header {
+    flex-direction: column;
+    height: 100vh !important;
+    margin: 5rem 1.5rem 1.5rem 1.5rem !important;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .master__header {
+    font-size: 4rem !important;
+  }
+}
+@media only screen and (max-width: 78.125em) {
+  .master__header__pic {
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    flex: 1;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .master__header__pic {
+    flex-direction: column;
+    height: 100rem;
+  }
+}
+
+@media only screen and (max-width: 78.125em) {
+  .box1 {
+    padding: 3rem !important;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .box1 {
+    text-align: center;
+    padding-bottom: 5rem !important;
+  }
+}
+
+.master__header {
+  height: 50vh;
+  margin: 5rem;
+  padding: 7rem;
+  color: #fff;
+  font-size: 7rem;
+  font-weight: 600;
+  font-family: "exo", sans-serif;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.master__header h2 {
+  font-size: 2rem;
+  max-width: 50rem;
+  line-height: 1.5;
+  margin-top: 3rem;
+}
+.master__header__pic {
+  position: absolute;
+  content: "";
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.2s;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.master__header-1 {
+  background-image: linear-gradient(to right bottom, #40c057, #20c997);
+}
+.master__header-2 {
+  background-image: linear-gradient(to right bottom, #63e6be, #1098ad);
+  padding-left: 55%;
+}
+.master__header-2-pic {
+  left: 0;
+}
+.master__header-3 {
+  background-image: linear-gradient(to right bottom, #ffe066, #ff922b);
+}
