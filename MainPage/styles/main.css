@@ -61,7 +61,7 @@ a {
 @media only screen and (max-width: 56.25em) {
   .master__header {
     flex-direction: column;
-    height: 100vh !important;
+    height: 100% !important;
     margin: 5rem 1.5rem 1.5rem 1.5rem !important;
   }
 }
@@ -94,6 +94,11 @@ a {
   .box1 {
     text-align: center;
     padding-bottom: 5rem !important;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .box1 {
+    padding: 1rem !important;
   }
 }
 

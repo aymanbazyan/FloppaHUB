@@ -73,7 +73,7 @@ body {
     @include respond(830) {
       display: block;
       overflow: visible;
-
+      height: 100vh;
       width: 100%;
     }
 

@@ -139,6 +139,7 @@ html {
   .hero__left, .hero__right {
     display: block;
     overflow: visible;
+    height: 100vh;
     width: 100%;
   }
 }
