@@ -22,15 +22,49 @@ a {
   color: inherit;
 }
 
-.back {
-  position: absolute;
-  top: 1rem;
-  right: 0;
-  padding: 1rem;
-  font-size: 10rem;
-  text-decoration: none;
-  z-index: 100;
-  font-family: "exo", sans-serif;
+.nav {
+  position: fixed;
+  font-size: 5rem;
+  background-color: #fff;
+  height: 7rem;
+  width: 7rem;
+  top: 6rem;
+  right: 6rem;
+  border-radius: 50%;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem rgba(#000, 0.3);
+  text-align: center;
+  cursor: pointer;
+
+  &__button {
+    position: relative;
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+
+    height: 0.3rem !important;
+    &,
+    &::before,
+    &::after {
+      width: 3.5rem;
+      height: 0.2rem;
+      background-color: #000;
+      display: block;
+    }
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+    }
+
+    &::before {
+      top: -0.8rem;
+    }
+    &::after {
+      top: 0.8rem;
+    }
+  }
 }
 
 .text-center {

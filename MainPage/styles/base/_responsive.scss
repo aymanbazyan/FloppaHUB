@@ -99,13 +99,15 @@
   }
 }
 /////////////
-.back {
+.nav {
   @include respond(900) {
-    top: -3.6rem;
+    top: 2rem;
+    right: 2rem;
   }
 
   @include respond(400) {
-    top: -5rem;
+    width: 5rem;
+    height: 5rem;
   }
 }
 
