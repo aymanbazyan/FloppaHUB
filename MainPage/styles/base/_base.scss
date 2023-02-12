@@ -51,6 +51,7 @@ a {
       display: block;
     }
 
+    height: 0.3rem !important;
     &::after,
     &::before {
       content: "";
