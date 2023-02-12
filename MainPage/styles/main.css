@@ -42,13 +42,12 @@ a {
   margin-top: 50%;
   margin-left: 50%;
   transform: translate(-50%, -50%);
-  height: 0.3rem !important;
 }
 .nav__button, .nav__button::before, .nav__button::after {
   width: 3.5rem;
-  height: 0.2rem;
   background-color: #000;
   display: block;
+  height: 2px;
 }
 .nav__button::after, .nav__button::before {
   content: "";
