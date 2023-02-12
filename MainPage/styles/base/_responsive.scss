@@ -17,6 +17,12 @@
     }
   }
 
+  @if $breakpoint == 509 {
+    @media only screen and (max-width: 31.8125em) {
+      @content;
+    }
+  }
+
   @if $breakpoint == 400 {
     @media only screen and (max-width: 25em) {
       @content;
@@ -92,10 +98,14 @@
     padding: 1rem !important;
   }
 }
-
+/////////////
 .back {
   @include respond(900) {
     top: -3.6rem;
+  }
+
+  @include respond(400) {
+    top: -5rem;
   }
 }
 
@@ -108,5 +118,29 @@
 .h1-header {
   @include respond(400) {
     font-size: 4rem !important;
+  }
+}
+
+//////////////
+
+.gallery {
+  &_title {
+    @include respond(900) {
+      margin-bottom: 18rem !important;
+    }
+  }
+
+  &__grid {
+    @include respond(900) {
+      row-gap: 33rem !important;
+    }
+
+    img {
+      @include respond(900) {
+        & {
+          height: 260% !important;
+        }
+      }
+    }
   }
 }
