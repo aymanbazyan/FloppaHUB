@@ -32,6 +32,14 @@ a {
   text-decoration: none;
 }
 
+.text-center {
+  text-align: center !important;
+}
+
+.margin-bottom-mid {
+  margin-bottom: 4rem;
+}
+
 @media only screen and (max-width: 104.4375em) {
   .master {
     line-height: 1;
@@ -76,6 +84,8 @@ a {
     width: 100% !important;
     height: 100% !important;
     flex: 1;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 @media only screen and (max-width: 56.25em) {
@@ -100,6 +110,20 @@ a {
   .box1 {
     padding: 1rem !important;
   }
+}
+
+.h1-header {
+  font-size: 6rem;
+  font-family: "exo", sans-serif;
+  background-image: linear-gradient(to right bottom, #12b886, #69db7c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  mix-blend-mode: screen;
+  color: transparent;
+  transition: all 0.2s;
+}
+.h1-header:hover {
+  transform: skew(10deg);
 }
 
 .master__header {
@@ -147,4 +171,8 @@ a {
 }
 .master__header-3 {
   background-image: linear-gradient(to right bottom, #ffe066, #ff922b);
+}
+
+.gallery {
+  overflow: hidden;
 }

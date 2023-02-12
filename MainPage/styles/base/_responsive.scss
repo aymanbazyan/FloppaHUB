@@ -67,6 +67,7 @@
         width: 100% !important;
         height: 100% !important;
         flex: 1;
+        object-fit: cover;
       }
 
       @include respond(900) {
