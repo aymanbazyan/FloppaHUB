@@ -51,11 +51,13 @@ a {
       display: block;
     }
 
-    height: 0.3rem !important;
-    &::after,
-    &::before {
-      content: "";
-      position: absolute;
+     &,
+    &::before,
+    &::after {
+      width: 3.5rem;
+      height: 0.3rem !important;
+      background-color: #000;
+      display: block;
     }
 
     &::before {
