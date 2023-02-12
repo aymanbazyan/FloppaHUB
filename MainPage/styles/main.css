@@ -25,11 +25,12 @@ a {
 
 .back {
   position: absolute;
-  top: -4.5rem;
+  top: -1rem;
   right: 0;
   padding: 3rem;
-  font-size: 6rem;
+  font-size: 10rem;
   text-decoration: none;
+  z-index: 100;
 }
 
 .text-center {
@@ -38,6 +39,14 @@ a {
 
 .margin-bottom-mid {
   margin-bottom: 4rem;
+}
+
+.margin-top-big {
+  margin-top: 6rem;
+}
+
+.margin-top-mid {
+  margin-top: 4rem;
 }
 
 @media only screen and (max-width: 104.4375em) {
@@ -112,6 +121,24 @@ a {
   }
 }
 
+@media only screen and (max-width: 56.25em) {
+  .back {
+    top: -3.6rem;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .master {
+    padding-top: 5rem !important;
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  .h1-header {
+    font-size: 4rem !important;
+  }
+}
+
 .h1-header {
   font-size: 6rem;
   font-family: "exo", sans-serif;
@@ -120,12 +147,16 @@ a {
   background-clip: text;
   mix-blend-mode: screen;
   color: transparent;
+  text-align: center !important;
   transition: all 0.2s;
 }
 .h1-header:hover {
   transform: skew(10deg);
 }
 
+.master {
+  overflow: hidden;
+}
 .master__header {
   height: 50vh;
   margin: 5rem;
@@ -174,5 +205,39 @@ a {
 }
 
 .gallery {
+  overflow: hidden;
+}
+.gallery__grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-auto-rows: 20rem;
+  grid-auto-flow: dense;
+}
+.gallery__grid img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.gallery__grid img:hover {
+  transform: skew(2deg);
+}
+.gallery__grid > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gallery__grid > div > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+
+.story {
   overflow: hidden;
 }

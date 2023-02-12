@@ -92,3 +92,21 @@
     padding: 1rem !important;
   }
 }
+
+.back {
+  @include respond(900) {
+    top: -3.6rem;
+  }
+}
+
+.master {
+  @include respond(900) {
+    padding-top: 5rem !important;
+  }
+}
+
+.h1-header {
+  @include respond(400) {
+    font-size: 4rem !important;
+  }
+}
