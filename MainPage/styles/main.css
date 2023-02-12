@@ -24,13 +24,14 @@ a {
 }
 
 .back {
-  position: fixed;
+  position: absolute;
   top: 1rem;
   right: 0;
   padding: 1rem;
   font-size: 10rem;
   text-decoration: none;
   z-index: 100;
+  font-family: "exo", sans-serif;
 }
 
 .text-center {
