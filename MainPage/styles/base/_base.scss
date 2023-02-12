@@ -23,10 +23,10 @@ a {
 }
 
 .back {
-  position: absolute;
-  top: -1rem;
+  position: fixed;
+  top: 1rem;
   right: 0;
-  padding: 3rem;
+  padding: 1rem;
   font-size: 10rem;
   text-decoration: none;
   z-index: 100;

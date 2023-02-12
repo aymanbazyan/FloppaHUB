@@ -135,6 +135,10 @@
       row-gap: 33rem !important;
     }
 
+    @include respond(509) {
+      padding: 1.5rem !important;
+    }
+
     img {
       @include respond(900) {
         & {

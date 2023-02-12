@@ -24,10 +24,10 @@ a {
 }
 
 .back {
-  position: absolute;
-  top: -1rem;
+  position: fixed;
+  top: 1rem;
   right: 0;
-  padding: 3rem;
+  padding: 1rem;
   font-size: 10rem;
   text-decoration: none;
   z-index: 100;
@@ -156,6 +156,11 @@ a {
 @media only screen and (max-width: 56.25em) {
   .gallery__grid {
     row-gap: 33rem !important;
+  }
+}
+@media only screen and (max-width: 31.8125em) {
+  .gallery__grid {
+    padding: 1.5rem !important;
   }
 }
 @media only screen and (max-width: 56.25em) {
