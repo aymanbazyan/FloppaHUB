@@ -20,19 +20,70 @@
   </head>
   <body>
     <div class="nav">
-      <a href="#" class="nav__button nav__button-clicked"></a>
+      <a href="#" class="nav__button"></a>
     </div>
-    <div class="menu hidden">
+    <div class="menu translateX">
       <ul class="menu__list">
-        <h6>not finished yet</h6>
-        <a href="#master"><li>Section 1</li></a>
-        <a href="#"><li>Section 2</li></a>
-        <a href="#"><li>Section 3</li></a>
-        <a href="#"><li>Section 4</li></a>
+        <h6><a href="../index.html">Return &rAarr;</a></h6>
+        <a href="#master"
+          ><li class="menu__list-item">
+            General info
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z"
+              />
+            </svg></li
+        ></a>
+        <a href="#gallery"
+          ><li class="menu__list-item">
+            Gallery
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+              />
+            </svg></li
+        ></a>
+        <a href="#story"
+          ><li class="menu__list-item">
+            Story
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 01-.923 1.785A5.969 5.969 0 006 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337z"
+              />
+            </svg></li
+        ></a>
+        <a href="#" class="menu__list-item"><li>Coming soon..</li></a>
       </ul>
     </div>
 
-    <section class="master">
+    <section class="master" id="master">
       <h1 class="h1-header text-center margin-bottom-mid margin-top-mid">
         General info!
       </h1>
@@ -87,7 +138,7 @@
         />
       </div>
     </section>
-    <section class="gallery">
+    <section class="gallery" id="gallery">
       <h1
         class="h1-header text-center margin-bottom-mid margin-top-mid gallery_title"
       >
@@ -144,9 +195,9 @@
         </div>
       </div>
     </section>
-    <section class="story">
+    <section class="story" id="story">
       <h1 class="h1-header text-center margin-bottom-mid margin-top-big">
-        Floppa Story!
+        Floppa Story! (Coming soon..)
       </h1>
     </section>
   </body>

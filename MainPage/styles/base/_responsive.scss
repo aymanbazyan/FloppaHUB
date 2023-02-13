@@ -17,6 +17,12 @@
     }
   }
 
+  @if $breakpoint == 640 {
+    @media only screen and (max-width: 40em) {
+      @content;
+    }
+  }
+
   @if $breakpoint == 509 {
     @media only screen and (max-width: 31.8125em) {
       @content;
@@ -158,6 +164,66 @@
         & {
           height: 260% !important;
         }
+      }
+    }
+  }
+}
+//////////////
+/// nav
+
+.nav {
+  @include respond(640) {
+    top: 4rem !important;
+    right: 4rem !important;
+
+    height: 5rem !important;
+    width: 5rem !important;
+  }
+
+  @include respond(509) {
+    top: 2rem !important;
+    right: 2rem !important;
+  }
+}
+
+.menu {
+  &__list {
+    line-height: 1;
+
+    h6 {
+      @include respond(400) {
+        line-height: 0.3;
+      }
+    }
+
+    a {
+      @include respond(900) {
+        font-size: 5rem !important;
+
+        &:hover {
+          font-size: 5.3rem !important;
+        }
+      }
+
+      @include respond(509) {
+        font-size: 4rem !important;
+
+        &:hover {
+          font-size: 4.3rem !important;
+        }
+      }
+
+      @include respond(400) {
+        font-size: 3rem !important;
+
+        &:hover {
+          font-size: 3.2rem !important;
+        }
+      }
+    }
+    svg {
+      @include respond(900) {
+        width: 5rem !important;
       }
     }
   }
