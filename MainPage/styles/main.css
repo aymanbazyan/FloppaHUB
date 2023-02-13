@@ -19,45 +19,12 @@ html {
   font-size: 62.5%;
 }
 
-a {
-  color: inherit;
+.hidden {
+  display: none;
 }
 
-.nav {
-  position: fixed;
-  font-size: 5rem;
-  background-color: #fff;
-  height: 7rem;
-  width: 7rem;
-  top: 6rem;
-  right: 6rem;
-  border-radius: 50%;
-  z-index: 2000;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
-  text-align: center;
-  cursor: pointer;
-}
-.nav__button {
-  position: relative;
-  margin-top: 50%;
-  margin-left: 50%;
-  transform: translate(-50%, -50%);
-}
-.nav__button, .nav__button::before, .nav__button::after {
-  width: 3.5rem;
-  background-color: #000;
-  display: block;
-  height: 2px;
-}
-.nav__button::after, .nav__button::before {
-  content: "";
-  position: absolute;
-}
-.nav__button::before {
-  top: -0.8rem;
-}
-.nav__button::after {
-  top: 0.8rem;
+a {
+  color: inherit;
 }
 
 .text-center {
@@ -182,6 +149,11 @@ a {
     margin-bottom: 18rem !important;
   }
 }
+@media only screen and (max-width: 31.8125em) {
+  .gallery_title {
+    margin-bottom: 1rem !important;
+  }
+}
 @media only screen and (max-width: 56.25em) {
   .gallery__grid {
     row-gap: 33rem !important;
@@ -190,6 +162,14 @@ a {
 @media only screen and (max-width: 31.8125em) {
   .gallery__grid {
     padding: 1.5rem !important;
+    display: block !important;
+  }
+}
+@media only screen and (max-width: 31.8125em) {
+  .gallery__grid > div > img {
+    -o-object-fit: scale-down !important;
+       object-fit: scale-down !important;
+    margin-bottom: 1rem;
   }
 }
 @media only screen and (max-width: 56.25em) {
@@ -211,6 +191,78 @@ a {
 }
 .h1-header:hover {
   transform: skew(5deg);
+}
+
+.nav {
+  position: fixed;
+  font-size: 5rem;
+  background-color: #fff;
+  height: 7rem;
+  width: 7rem;
+  top: 6rem;
+  right: 6rem;
+  border-radius: 50%;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+  text-align: center;
+  cursor: pointer;
+}
+.nav__button {
+  position: relative;
+  margin-top: 50%;
+  margin-left: 50%;
+  transform: translate(-50%, -50%);
+}
+.nav__button, .nav__button::before, .nav__button::after {
+  width: 3.5rem;
+  background-color: #000;
+  display: block;
+  height: 2px;
+}
+.nav__button::after, .nav__button::before {
+  content: "";
+  position: absolute;
+}
+.nav__button::before {
+  top: -0.8rem;
+}
+.nav__button::after {
+  top: 0.8rem;
+}
+
+body {
+  position: relative;
+}
+
+.menu {
+  position: fixed;
+  background-image: linear-gradient(to right bottom, #12b886, #0c8599);
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  opacity: 95%;
+}
+.menu__list {
+  color: #fff;
+  font-size: 7rem;
+  font-family: "exo", sans-serif;
+  list-style: none;
+  text-align: center;
+  margin-top: 50%;
+  margin-left: 50%;
+  transform: translate(-50%, -50%);
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.menu__list a {
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.menu__list a:hover {
+  font-size: 7.5rem;
 }
 
 .master {

@@ -130,6 +130,10 @@
     @include respond(900) {
       margin-bottom: 18rem !important;
     }
+
+    @include respond(509) {
+      margin-bottom: 1rem !important;
+    }
   }
 
   &__grid {
@@ -139,6 +143,14 @@
 
     @include respond(509) {
       padding: 1.5rem !important;
+      display: block !important;
+    }
+
+    & > div > img {
+      @include respond(509) {
+        object-fit: scale-down !important;
+        margin-bottom: 1rem;
+      }
     }
 
     img {
