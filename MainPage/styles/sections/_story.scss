@@ -1,3 +1,96 @@
 .story {
-  overflow: hidden;
+  ::selection {
+    visibility: visible;
+  }
+  &__box {
+    background-color: #087f5b;
+    width: 80rem;
+    margin: 3rem auto;
+    margin-bottom: 0.2rem;
+    border-radius: 0.8rem;
+    color: #fff;
+    padding: 3.2rem 4.8rem 3.2rem 8.6rem;
+
+    display: flex;
+    gap: 8.6rem;
+
+    img {
+      width: 120%;
+      transform: scale(1.5);
+      border-radius: 0.5rem;
+      box-shadow: 0 1rem 3rem rgba(#000, 0.4);
+    }
+
+    &_blackquote {
+      font-family: "exo", sans-serif;
+      &-text {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      &-poster,
+      &-company {
+        opacity: 80%;
+      }
+
+      &-poster {
+        font-size: 1.8rem;
+      }
+
+      &-company {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+      }
+    }
+
+    position: relative;
+    &-arrow {
+      &-left,
+      &-right {
+        position: absolute;
+        content: "";
+        width: 5rem;
+        height: 5rem;
+        background-color: #eee;
+        color: rgba(17, 17, 17, 0.8);
+        cursor: pointer;
+        border-radius: 50%;
+        box-shadow: 0 1rem 3rem rgba(#000, 0.4);
+        transform: translateY(-50%);
+        top: 50%;
+
+        transition: all 0.2s;
+        &:active {
+          box-shadow: 0 1rem 3rem rgba(#000, 0.3);
+          top: 51%;
+        }
+      }
+      &-left {
+        left: -3.3%;
+      }
+
+      &-right {
+        right: -3.3%;
+      }
+    }
+  }
+
+  &__dots {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    .dot {
+      width: 1.3rem;
+      height: 1.3rem;
+      background-color: #fff;
+      border: solid 2px #087f5b;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .fill {
+      background-color: #087f5b;
+      border: none;
+    }
+  }
 }
