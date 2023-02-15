@@ -285,6 +285,7 @@
 
         @include respond(336) {
           left: -10% !important;
+          opacity: 50% !important;
         }
       }
       &-right {
