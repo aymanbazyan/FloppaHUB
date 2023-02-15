@@ -277,7 +277,7 @@ a {
 @media only screen and (max-width: 40em) {
   .story__box img {
     align-self: center;
-    width: 50% !important;
+    width: 100% !important;
     order: 1;
   }
 }
@@ -301,7 +301,6 @@ a {
 @media only screen and (max-width: 21em) {
   .story__box-arrow-right {
     right: -10% !important;
-    opacity: 50% !important;
   }
 }
 
@@ -570,6 +569,7 @@ body {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.4);
   transform: translateY(-50%);
   top: 50%;
+  z-index: 20;
   transition: all 0.2s;
 }
 .story__box-arrow-left:active, .story__box-arrow-right:active {

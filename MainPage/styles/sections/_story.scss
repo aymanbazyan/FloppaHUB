@@ -58,6 +58,7 @@
         box-shadow: 0 1rem 3rem rgba(#000, 0.4);
         transform: translateY(-50%);
         top: 50%;
+        z-index: 20;
 
         transition: all 0.2s;
         &:active {

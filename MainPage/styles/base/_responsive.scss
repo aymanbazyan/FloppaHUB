@@ -271,7 +271,7 @@
       }
       @include respond(640) {
         align-self: center;
-        width: 50% !important;
+        width: 100% !important;
         order: 1;
       }
     }
@@ -285,7 +285,6 @@
 
         @include respond(336) {
           left: -10% !important;
-          opacity: 50% !important;
         }
       }
       &-right {
@@ -296,7 +295,6 @@
 
         @include respond(336) {
           right: -10% !important;
-          opacity: 50% !important;
         }
       }
     }
