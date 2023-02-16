@@ -66,7 +66,6 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   width: 50px;
   height: 50px;
   border: 5px solid #ccc;
@@ -273,6 +272,16 @@ body.loaded .preloader {
 }
 
 @media only screen and (max-width: 56.25em) {
+  .story h1 {
+    margin-top: 17rem !important;
+  }
+}
+@media only screen and (max-width: 31.8125em) {
+  .story h1 {
+    margin-top: 7rem !important;
+  }
+}
+@media only screen and (max-width: 56.25em) {
   .story__box {
     gap: 1.6rem !important;
     width: 60rem !important;
@@ -307,7 +316,7 @@ body.loaded .preloader {
 }
 @media only screen and (max-width: 56.25em) {
   .story__box img {
-    width: 500% !important;
+    width: 20rem !important;
     transform: scale(1) !important;
   }
 }
@@ -350,7 +359,7 @@ body.loaded .preloader {
   mix-blend-mode: screen;
   color: transparent;
   cursor: default;
-  width: 99.8%;
+  width: 99.7%;
   transition: all 0.2s;
 }
 .h1-header:hover {
@@ -615,7 +624,7 @@ body {
   position: relative;
 }
 .story__box img {
-  width: 120%;
+  width: 15rem;
   transform: scale(1.5);
   border-radius: 0.5rem;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.4);

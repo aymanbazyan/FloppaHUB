@@ -1,6 +1,5 @@
 "use strict";
 //////////////////////////////////////////////// preloader
-
 document.addEventListener("DOMContentLoaded", function () {
   var body = document.querySelector("body");
   body.classList.add("loading");
@@ -38,6 +37,7 @@ navItem.forEach((btn) => {
 
 ////////////////////////////////////////////////////////////// gallery
 
+const float = document.querySelector(".float");
 const galItem = document.querySelectorAll(".gallery__item");
 const overlay = document.querySelector(".float__overlay");
 
@@ -48,7 +48,7 @@ function floatOn() {
 function overlayOn() {
   overlay.classList.toggle("hidden");
 }
-
+/////////////////
 galItem.forEach((btn) => {
   btn.addEventListener("click", floatOn);
 });

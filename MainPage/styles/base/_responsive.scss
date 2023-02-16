@@ -236,6 +236,16 @@
 }
 ///////////////////////////////
 .story {
+  h1 {
+    @include respond(900) {
+      margin-top: 17rem !important;
+    }
+
+    @include respond(509) {
+      margin-top: 7rem !important;
+    }
+  }
+
   &__box {
     @include respond(900) {
       gap: 1.6rem !important;
@@ -266,7 +276,7 @@
 
     img {
       @include respond(900) {
-        width: 500% !important;
+        width: 20rem !important;
         transform: scale(1) !important;
       }
       @include respond(640) {
