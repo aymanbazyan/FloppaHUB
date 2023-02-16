@@ -14,11 +14,13 @@
       href="https://fonts.googleapis.com/css2?family=Exo:wght@500;600&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="icon" href="/StartMenu/content/floppa2.jpg" />
     <title>FloppaHub</title>
   </head>
   <body>
+    <div class="preloader"></div>
     <div class="nav">
       <a href="#" class="nav__button"></a>
     </div>
@@ -146,53 +148,148 @@
       </h1>
       <div class="gallery__grid">
         <div>
-          <img src="content/gallery/1.jpg" alt="floppa pic" />
+          <img
+            src="content/gallery/1.jpg"
+            alt="floppa pic"
+            class="gallery__item"
+          />
         </div>
         <div>
-          <img src="content/gallery/2.jpg" alt="floppa pic" />
+          <img
+            src="content/gallery/2.jpg"
+            alt="floppa pic"
+            class="gallery__item"
+          />
         </div>
         <div>
-          <img src="content/gallery/6.jpg" alt="floppa pic" />
+          <img
+            src="content/gallery/6.jpg"
+            alt="floppa pic"
+            class="gallery__item"
+          />
         </div>
         <div>
-          <img src="content/gallery/4.jpg" alt="floppa pic" />
+          <img
+            src="content/gallery/4.jpg"
+            alt="floppa pic"
+            class="gallery__item"
+          />
         </div>
         <div>
-          <img src="content/gallery/5.jpg" alt="floppa pic" />
+          <img
+            src="content/gallery/5.jpg"
+            alt="floppa pic"
+            class="gallery__item"
+          />
         </div>
         <div>
-          <img src="content/gallery/3.jpg" alt="floppa pic" />
+          <img
+            src="content/gallery/3.jpg"
+            alt="floppa pic"
+            class="gallery__item"
+          />
         </div>
         <div>
-          <img src="content/gallery/7.jpg" alt="floppa pic" />
+          <img
+            src="content/gallery/7.jpg"
+            alt="floppa pic"
+            class="gallery__item"
+          />
         </div>
         <div>
-          <img src="content/gallery/8.jpg" alt="floppa pic" />
+          <img
+            src="content/gallery/8.jpg"
+            alt="floppa pic"
+            class="gallery__item"
+          />
         </div>
         <div>
-          <img src="content/gallery/9.jpg" alt="floppa pic" />
+          <img
+            src="content/gallery/9.jpg"
+            alt="floppa pic"
+            class="gallery__item"
+          />
         </div>
         <div>
-          <img src="content/gallery/10.jpg" alt="floppa pic" />
+          <img
+            src="content/gallery/10.jpg"
+            alt="floppa pic"
+            class="gallery__item"
+          />
         </div>
         <div>
-          <img src="content/gallery/11.jpg" alt="floppa pic" />
+          <img
+            src="content/gallery/11.jpg"
+            alt="floppa pic"
+            class="gallery__item"
+          />
         </div>
         <div>
-          <img src="content/gallery/12.jpg" alt="floppa pic" />
+          <img
+            src="content/gallery/12.jpg"
+            alt="floppa pic"
+            class="gallery__item"
+          />
         </div>
         <div>
-          <img src="content/gallery/13.jpg" alt="floppa pic" />
+          <img
+            src="content/gallery/13.jpg"
+            alt="floppa pic"
+            class="gallery__item"
+          />
         </div>
         <div>
-          <img src="content/gallery/14.jpg" alt="floppa pic" />
+          <img
+            src="content/gallery/14.jpg"
+            alt="floppa pic"
+            class="gallery__item"
+          />
         </div>
         <div>
-          <img src="content/gallery/15.jpg" alt="floppa pic" />
+          <img
+            src="content/gallery/15.jpg"
+            alt="floppa pic"
+            class="gallery__item"
+          />
         </div>
         <div>
-          <img src="content/gallery/16.jpg" alt="floppa pic" />
+          <img
+            src="content/gallery/16.jpg"
+            alt="floppa pic"
+            class="gallery__item"
+          />
         </div>
+      </div>
+      <div class="float__overlay hidden"></div>
+      <div class="float__arrows hidden">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="float__arrow float__arrow-right"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+          />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="float__arrow float__arrow-left"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5L8.25 12l7.5-7.5"
+          />
+        </svg>
       </div>
     </section>
     <section class="story margin-bottom-mid" id="story">
@@ -383,6 +480,6 @@
         <div class="dot">&nbsp;</div>
       </div>
     </section>
+    <script src="scripts/script.js"></script>
   </body>
-  <script src="scripts/script.js"></script>
 </html>

@@ -1,4 +1,17 @@
 "use strict";
+//////////////////////////////////////////////// preloader
+
+document.addEventListener("DOMContentLoaded", function () {
+  var body = document.querySelector("body");
+  body.classList.add("loading");
+});
+
+window.addEventListener("load", function () {
+  var body = document.querySelector("body");
+  body.classList.remove("loading");
+  body.classList.add("loaded");
+});
+
 //////////////////////////////////////////////// nav
 const navBtn = document.querySelector(".nav");
 const navIcon = document.querySelector(".nav__button");
@@ -22,7 +35,30 @@ navItem.forEach((btn) => {
     navIcon.classList.toggle("nav__button-clicked");
   });
 });
+
+////////////////////////////////////////////////////////////// gallery
+
+const galItem = document.querySelectorAll(".gallery__item");
+const overlay = document.querySelector(".float__overlay");
+
+function floatOn() {
+  this.classList.toggle("float");
+}
+
+function overlayOn() {
+  overlay.classList.toggle("hidden");
+}
+
+galItem.forEach((btn) => {
+  btn.addEventListener("click", floatOn);
+});
+
+galItem.forEach((btn) => {
+  btn.addEventListener("click", overlayOn);
+});
+
 ////////////////////////////////////////////////////////////// story
+
 const strBox1 = document.querySelector(".story__box-1");
 const strBox2 = document.querySelector(".story__box-2");
 const strBox3 = document.querySelector(".story__box-3");
@@ -80,3 +116,23 @@ function showCurrentBox() {
 }
 
 showCurrentBox();
+
+// for (let i = 0; i < dots.length; i++) {
+//   dots[i].forEach((btn) => {
+//     btn[0].addEventListener("click", (event) => {
+//       currentBoxIndex === 1;
+//     });
+
+//     btn[1].addEventListener("click", (event) => {
+//       currentBoxIndex === 2;
+//     });
+
+//     btn[2].addEventListener("click", (event) => {
+//       currentBoxIndex === 3;
+//     });
+
+//     btn[3].addEventListener("click", (event) => {
+//       currentBoxIndex === 4;
+//     });
+//   });
+// }
