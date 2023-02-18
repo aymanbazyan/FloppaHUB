@@ -1,0 +1,52 @@
+.master {
+  overflow: hidden;
+  &__header {
+    height: 50vh;
+    margin: 5rem;
+    padding: 7rem;
+    color: #fff;
+    font-size: 7rem;
+    font-weight: 600;
+    font-family: "exo", sans-serif;
+    border-radius: 10px;
+    & h2 {
+      font-size: 2rem;
+      max-width: 50rem;
+      line-height: 1.5;
+      margin-top: 3rem;
+    }
+    position: relative;
+    overflow: hidden;
+    &__pic {
+      position: absolute;
+      content: "";
+      background-size: cover;
+      background-position: center;
+      width: 50%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+      overflow: hidden;
+      transition: all 0.2s;
+      object-fit: cover;
+    }
+
+    &-1 {
+      background-image: linear-gradient(to right bottom, #40c057, #20c997);
+    }
+
+    &-2 {
+      background-image: linear-gradient(to right bottom, #63e6be, #1098ad);
+      padding-left: 55%;
+
+      &-pic {
+        left: 0;
+      }
+    }
+
+    &-3 {
+      background-image: linear-gradient(to right bottom, #ffe066, #ff922b);
+    }
+  }
+}

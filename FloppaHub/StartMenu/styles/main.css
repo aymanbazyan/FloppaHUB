@@ -1,0 +1,191 @@
+@charset "UTF-8";
+body {
+  border: 5px solid #2f9e44;
+  height: 100vh;
+}
+
+.hidden {
+  display: none;
+}
+
+.hero {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+.hero__left, .hero__right {
+  cursor: pointer;
+  height: 100vh;
+  width: 50%;
+  background-position: center;
+  background-size: cover;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  position: relative;
+}
+.hero__left-flexbox, .hero__right-flexbox {
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  transform: translateY(-7rem);
+}
+.hero__left-header, .hero__right-header {
+  font-size: 7rem;
+  font-family: "exo", sans-serif;
+  color: #fff;
+}
+.hero__left-details, .hero__right-details {
+  font-size: 3rem;
+  font-family: "exo", sans-serif;
+  color: #fff;
+}
+.hero__left::before, .hero__right::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-position: center;
+  background-size: cover;
+  transition: all 0.2s;
+}
+.hero__left:hover::before, .hero__right:hover::before {
+  opacity: 1;
+}
+.hero__left {
+  background-image: linear-gradient(rgba(34, 34, 34, 0.3), rgba(34, 34, 34, 0.3)), url(../content/floppa1.jpg);
+}
+.hero__left::before {
+  background-image: linear-gradient(rgba(34, 34, 34, 0.6), rgba(34, 34, 34, 0.6)), url(../content/floppa1.jpg);
+}
+.hero__right {
+  background-image: linear-gradient(rgba(34, 34, 34, 0.3), rgba(34, 34, 34, 0.3)), url(../content/floppa3-2.jpg);
+}
+.hero__right::before {
+  background-image: linear-gradient(rgba(34, 34, 34, 0.6), rgba(34, 34, 34, 0.6)), url(../content/floppa3-2.jpg);
+}
+.hero::after {
+  position: absolute;
+  content: "FloppaHub";
+  padding: 1rem;
+  color: #fff;
+  font-size: 5rem;
+  font-family: "exo", sans-serif;
+  background-color: #2f9e44;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  /*
+      we want rem = 10px, by default rem = 16px,
+      10 ÷ 16 = 0.625 (62.5%)
+      */
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: 93.75em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 62.5em) {
+  html {
+    font-size: 45%;
+  }
+}
+
+@media only screen and (max-width: 51.875em) {
+  body {
+    border: none;
+  }
+}
+
+@media only screen and (max-width: 62.5em) {
+  .hidden {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 51.875em) {
+  .hero {
+    width: 100%;
+    height: 200%;
+    display: block;
+    overflow: visible;
+    border: 2px solid #2f9e44;
+  }
+}
+@media only screen and (max-width: 51.875em) {
+  .hero__left, .hero__right {
+    display: block;
+    overflow: visible;
+    height: 100vh;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 51.875em) {
+  .hero__left-flexbox, .hero__right-flexbox {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media only screen and (max-width: 46.25em) {
+  .hero__left-header, .hero__right-header {
+    line-height: 0.9;
+  }
+}
+@media only screen and (max-width: 46.25em) {
+  .hero__left-details, .hero__right-details {
+    margin-top: 3rem;
+    line-height: 1.4;
+  }
+}
+@media only screen and (max-width: 62.5em) {
+  .hero__left::before, .hero__right::before {
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .hero__right::before {
+    background-position: left;
+  }
+}
+@media only screen and (max-width: 23.125em) {
+  .hero__right::before {
+    background-position: left;
+  }
+}
+@media only screen and (max-width: 62.5em) {
+  .hero::after {
+    top: 70%;
+  }
+}
+@media only screen and (max-width: 51.875em) {
+  .hero::after {
+    left: 50%;
+    top: 50%;
+  }
+}
