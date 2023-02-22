@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  height: 100%;
+  background-image: linear-gradient(to right bottom, #339af0, #0c8599);
+}
+
+.hidden {
+  display: none;
+}

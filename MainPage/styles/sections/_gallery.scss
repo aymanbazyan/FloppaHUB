@@ -1,4 +1,5 @@
 .gallery {
+  overflow: hidden;
   &__grid {
     display: grid;
     gap: 1rem;
@@ -45,6 +46,18 @@
     object-fit: scale-down;
     z-index: 40;
 
+    &__overlay {
+      position: fixed;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(51, 51, 51, 0.8);
+      z-index: 30;
+    }
+
+    /*
     &__arrow {
       position: absolute;
       content: "";
@@ -71,16 +84,6 @@
         right: 25%;
       }
     }
-
-    &__overlay {
-      position: fixed;
-      content: "";
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(51, 51, 51, 0.8);
-      z-index: 30;
-    }
+    */
   }
 }

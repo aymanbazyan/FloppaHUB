@@ -37,24 +37,31 @@ navItem.forEach((btn) => {
 
 ////////////////////////////////////////////////////////////// gallery
 
-const float = document.querySelector(".float");
-const galItem = document.querySelectorAll(".gallery__item");
+const galItems = document.querySelectorAll(".gallery__item");
 const overlay = document.querySelector(".float__overlay");
 
-function floatOn() {
+function floatToggle() {
   this.classList.toggle("float");
 }
 
-function overlayOn() {
+function overlayToggle() {
   overlay.classList.toggle("hidden");
 }
 /////////////////
-galItem.forEach((btn) => {
-  btn.addEventListener("click", floatOn);
+galItems.forEach((btn) => {
+  btn.addEventListener("click", floatToggle);
 });
 
-galItem.forEach((btn) => {
-  btn.addEventListener("click", overlayOn);
+galItems.forEach((btn) => {
+  btn.addEventListener("click", overlayToggle);
+});
+//////////////////////////
+overlay.addEventListener("click", function () {
+  overlayToggle();
+
+  galItems.forEach((btn) => {
+    btn.classList.remove("float");
+  });
 });
 
 ////////////////////////////////////////////////////////////// story

@@ -527,6 +527,9 @@ body {
   background-image: linear-gradient(to right bottom, #ffe066, #ff922b);
 }
 
+.gallery {
+  overflow: hidden;
+}
 .gallery__grid {
   display: grid;
   gap: 1rem;
@@ -568,30 +571,34 @@ body {
   -o-object-fit: scale-down;
      object-fit: scale-down;
   z-index: 40;
-}
-.gallery .float__arrow {
-  position: absolute;
-  content: "";
-  width: 7rem;
-  height: 7rem;
-  background-color: #eee;
-  color: rgba(17, 17, 17, 0.8);
-  cursor: pointer;
-  border-radius: 50%;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.4);
-  transform: translateY(-50%);
-  top: 50%;
-  transition: all 0.2s;
-}
-.gallery .float__arrow:active {
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
-  top: 51%;
-}
-.gallery .float__arrow-left {
-  left: 25%;
-}
-.gallery .float__arrow-right {
-  right: 25%;
+  /*
+  &__arrow {
+    position: absolute;
+    content: "";
+    width: 7rem;
+    height: 7rem;
+    background-color: #eee;
+    color: rgba(17, 17, 17, 0.8);
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 1rem 3rem rgba(#000, 0.4);
+    transform: translateY(-50%);
+    top: 50%;
+
+    transition: all 0.2s;
+    &:active {
+      box-shadow: 0 1rem 3rem rgba(#000, 0.3);
+      top: 51%;
+    }
+    &-left {
+      left: 25%;
+    }
+
+    &-right {
+      right: 25%;
+    }
+  }
+  */
 }
 .gallery .float__overlay {
   position: fixed;

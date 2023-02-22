@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  height: 100%;
+  background-image: linear-gradient(to right bottom, #339af0, #0c8599);
+}
+
+.hidden {
+  display: none;
+}
+
+.master {
+  background-color: #fff;
+  width: 150rem;
+  height: 100vh;
+  margin: 0 auto;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.4);
+  font-family: "exo", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+.master__sidebar {
+  height: 100%;
+  overflow-y: scroll;
+}
+.master__sidebar__users {
+  padding: 1rem;
+}
+.master__sidebar .user {
+  border-bottom: solid 1px #999;
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+  transition: all 0.2s;
+}
+.master__sidebar .user:not(:first-child) {
+  padding: 1rem 0;
+}
+.master__sidebar .user__name {
+  font-size: 2rem;
+}
+.master__sidebar .user__photo img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+.master__sidebar .user .global {
+  align-self: center;
+}
+.master__sidebar .user:hover {
+  background-color: #eee;
+}
+.master__chat {
+  grid-column: 2/3;
+  width: 100%;
+}
+.master__chat.default {
+  background-image: linear-gradient(to right bottom, #364fc7, #5f3dc4);
+}
+.master__chat__default {
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 50%;
+  margin-left: 50%;
+  transform: translate(-50%, -50%);
+}
