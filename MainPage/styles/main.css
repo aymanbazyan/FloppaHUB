@@ -350,6 +350,17 @@ body.loaded .preloader {
   }
 }
 
+@media only screen and (max-width: 40em) {
+  .footer {
+    padding: 3rem 0 !important;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .footer__social {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
 .h1-header {
   font-size: 6rem;
   font-family: "exo", sans-serif;
@@ -695,4 +706,85 @@ body {
 .story__dots .fill {
   background-color: #087f5b;
   border: none;
+}
+
+.footer {
+  margin-top: 10rem;
+  padding: 10rem;
+  background-color: #333;
+  display: grid;
+  justify-items: center;
+  gap: 2rem;
+}
+.footer ::-moz-selection {
+  background-color: #fff;
+  color: #333;
+}
+.footer ::selection {
+  background-color: #fff;
+  color: #333;
+}
+.footer__btn {
+  padding: 1rem 3rem;
+  border: 3px solid #fff;
+  color: #fff;
+  font-size: 1.6rem;
+  background: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.footer__btn:hover {
+  transform: scale(1.1);
+}
+.footer__social {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+}
+.footer__social-item {
+  fill: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+.footer__social-item:hover {
+  transform: scale(1.1);
+}
+.footer__social-item .tooltip {
+  position: absolute;
+  font-size: 2rem;
+  font-family: "exo", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  padding: 0.5rem 1.8rem;
+  border-radius: 10px;
+  background-color: #555;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.5);
+  top: -4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+.footer__social-item .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: inherit;
+  bottom: -0.8rem;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  z-index: 1;
+}
+.footer__social-item:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.copyright {
+  font-size: 1.8rem;
+  color: #fff;
+  font-family: "Exo", sans-serif;
 }

@@ -310,3 +310,15 @@
     }
   }
 }
+//////////////////////////////////////////// footer
+.footer {
+  @include respond(640) {
+    padding: 3rem 0 !important;
+  }
+
+  &__social {
+    @include respond(400) {
+      grid-template-columns: repeat(3, 1fr) !important;
+    }
+  }
+}

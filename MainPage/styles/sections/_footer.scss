@@ -1,0 +1,88 @@
+.footer {
+  ::selection {
+    background-color: #fff;
+    color: #333;
+  }
+
+  margin-top: 10rem;
+  padding: 10rem;
+  background-color: #333;
+
+  display: grid;
+  justify-items: center;
+  gap: 2rem;
+
+  &__btn {
+    padding: 1rem 3rem;
+    border: 3px solid #fff;
+    color: #fff;
+    font-size: 1.6rem;
+    background: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__social {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+  }
+
+  &__social-item {
+    fill: #fff;
+    cursor: pointer;
+
+    transition: all 0.2s;
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    position: relative;
+
+    .tooltip {
+      position: absolute;
+      font-size: 2rem;
+      font-family: "exo", sans-serif;
+      font-weight: 600;
+      color: #fff;
+      padding: 0.5rem 1.8rem;
+      border-radius: 10px;
+      background-color: #555;
+      box-shadow: 0 3rem 5rem rgba(#000, 0.5);
+      top: -4rem;
+      left: 50%;
+      transform: translateX(-50%);
+
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.5s;
+
+      &::before {
+        position: absolute;
+        content: "";
+        height: 1.5rem;
+        width: 1.5rem;
+        background-color: inherit;
+        bottom: -0.8rem;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+        z-index: 1;
+      }
+    }
+    &:hover {
+      .tooltip {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.copyright {
+  font-size: 1.8rem;
+  color: #fff;
+  font-family: "Exo", sans-serif;
+}
