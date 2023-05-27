@@ -31,7 +31,7 @@
 
           <div class="user">
             <div class="user__photo">
-              <img src="content/pfp/pfp1.png" alt="profile picture" />
+              <img src="content/pfp/pfp00001.png" alt="profile picture" />
             </div>
             <div class="box">
               <h1 class="user__name">Aymen Bazyan</h1>
@@ -41,7 +41,7 @@
 
           <div class="user">
             <div class="user__photo">
-              <img src="content/pfp/pfp2.png" alt="profile picture" />
+              <img src="content/pfp/pfp00002.png" alt="profile picture" />
             </div>
             <div class="box">
               <h1 class="user__name">Abod Bazyan</h1>
@@ -61,7 +61,7 @@
 
           <div class="user">
             <div class="user__photo">
-              <img src="content/pfp/pfp3.png" alt="profile picture" />
+              <img src="content/pfp/pfp00003.png" alt="profile picture" />
             </div>
             <div class="box">
               <h1 class="user__name">Hatim alarabi 2</h1>
@@ -70,10 +70,13 @@
           </div>
         </div>
       </div>
-      <div class="master__chat default">
+      <div class="master__chat default-background">
         <div class="master__chat__default">
           Start chatting with your friends!
         </div>
+        <ul
+          class="master__chat__messages master__chat__messages-box hidden"
+        ></ul>
         <div class="master__chat__global hidden">
           <input
             type="text"
@@ -83,7 +86,26 @@
           <button class="master__chat__global-submit">Send</button>
         </div>
       </div>
-      <div class="master__settings">settings</div>
+      <div class="master__settings">
+        <div class="master__settings-setting">
+          <input
+            type="radio"
+            id="Light"
+            class="master__settings-setting-btn"
+            name="Color mode"
+            value="Light"
+          />
+          <label for="Light">Light</label><br />
+          <input
+            type="radio"
+            id="dark"
+            class="master__settings-setting-btn"
+            name="Color mode"
+            value="Dark"
+          />
+          <label for="Dark">Dark</label><br />
+        </div>
+      </div>
     </div>
     <script src="scripts/script.js"></script>
   </body>

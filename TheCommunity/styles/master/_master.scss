@@ -1,7 +1,7 @@
 .master {
   background-color: #fff;
-  width: 150rem;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   box-shadow: 0 3rem 5rem rgba(#000, 0.4);
   font-family: "exo", sans-serif;
@@ -54,37 +54,50 @@
   }
 
   &__chat {
-    border: solid 2px #eee;
+    //border: solid 2px #eee;
     grid-column: 2 / 3;
     width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
     ///////////////////////////////////// default view
-    &.default {
+    &.default-background {
       background-image: linear-gradient(to right bottom, #364fc7, #5f3dc4);
     }
 
     &__default {
       font-size: 3rem;
       color: #fff;
+      text-align: center;
       cursor: pointer;
       margin-top: 50%;
       margin-left: 50%;
       transform: translate(-50%, -50%);
+
+      display: grid;
     }
 
     display: grid;
-    align-content: end;
+
     &__global {
       margin-bottom: 1rem;
       display: flex;
       gap: 1rem;
       justify-content: center;
+      align-self: end;
 
       &-input {
         font-size: 2rem;
-        width: 80%;
+        width: 70%;
         height: 5rem;
         border-radius: 40px;
         padding: 1rem;
+        border: 1px solid #333;
+
+        transition: all 0.2s;
+        &:focus {
+          width: 80%;
+          outline: none;
+        }
       }
 
       &-submit {
@@ -97,7 +110,7 @@
         font-size: 2rem;
         color: #fff;
         cursor: pointer;
-        box-shadow: 0 3rem 5rem rgba(#000, 0.4);
+        box-shadow: 0 3rem 5rem rgba(#000, 0.2);
 
         transition: all 0.2s;
         &:hover {
@@ -110,11 +123,62 @@
         }
       }
     }
+    &__messages {
+      font-size: 1.8rem;
+      font-family: "exo", sans-serif;
+      width: 100%;
+      height: min-content;
+      padding: 1rem;
+      margin: 0.5rem;
+      word-break: break-all;
+      list-style: none;
+      border-top-right-radius: 15px;
+      border-top-left-radius: 15px;
 
+      display: grid;
+      gap: 1rem;
+
+      & .message-1 {
+        background-image: linear-gradient(to bottom right, #ced4da, #ced4da);
+        border-bottom-right-radius: 15px;
+        width: fit-content;
+        max-width: 80%;
+      }
+
+      &-received-box {
+        display: flex;
+        img {
+          width: 4rem;
+          height: 4rem;
+          border-radius: 50%;
+          align-self: center;
+        }
+      }
+
+      & .message-2 {
+        background-image: linear-gradient(to bottom right, #50a8ff, #63a9f0);
+        width: fit-content;
+        max-width: 80%;
+        justify-self: end;
+        border-bottom-left-radius: 15px;
+      }
+
+      & span {
+        font-size: 1rem;
+      }
+    }
     ///////////////////////////////////// global view
   }
 
-  //&__settings {
-  //background-color: yellow;
-  //}
+  &__settings {
+    font-size: 2rem;
+    overflow-y: scroll;
+
+    display: grid;
+    justify-content: center;
+
+    &-setting {
+      margin-top: 1rem;
+    }
+  }
 }
